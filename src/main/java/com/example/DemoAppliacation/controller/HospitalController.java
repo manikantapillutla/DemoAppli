@@ -20,7 +20,7 @@ public class HospitalController {
         return hospitalService.getAllHospitals();
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/details/{id}")
     public ResponseEntity<HospitalModel> getHospitalById(@RequestParam Long id) {
         HospitalModel hospital = hospitalService.getHospitalById(id);
         if (hospital != null) {
